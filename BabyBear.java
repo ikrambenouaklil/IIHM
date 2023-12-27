@@ -2,11 +2,11 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class SwingTemplate extends JFrame {
+public class BabyBear extends JFrame {
 
-    public SwingTemplate() {
+    public  BabyBear() {
         // Set the title of the JFrame
-        setTitle("Java Swing Template");
+        setTitle("Little Bear ");
 
         // Set the default close operation
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -19,7 +19,7 @@ public class SwingTemplate extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Code to be executed when the button is clicked
-                JOptionPane.showMessageDialog(SwingTemplate.this, "Button Clicked!");
+                JOptionPane.showMessageDialog( BabyBear.this, "Button Clicked!");
             }
         });
 
@@ -30,19 +30,14 @@ public class SwingTemplate extends JFrame {
         setLayout(null);
 
         // Set the size of the JFrame
-        setSize(300, 200);
+        setSize(1440, 200);
 
         // Set the JFrame to be visible
         setVisible(true);
     }
 
     public static void main(String[] args) {
-        // Run the GUI code on the Event Dispatch Thread (EDT)
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new SwingTemplate();
-            }
-        });
+    new  BabyBear();
     }
 }
+
