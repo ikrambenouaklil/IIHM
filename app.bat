@@ -1,2 +1,0 @@
-javac SwingTemplate.java
-java SwingTemplate

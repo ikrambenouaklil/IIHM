@@ -6,7 +6,7 @@ public class SwingTemplate extends JFrame {
 
     public SwingTemplate() {
         // Set the title of the JFrame
-        setTitle("Little Bear ");
+        setTitle("Java Swing Template");
 
         // Set the default close operation
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -37,7 +37,12 @@ public class SwingTemplate extends JFrame {
     }
 
     public static void main(String[] args) {
-    new SwingTemplate();
+        // Run the GUI code on the Event Dispatch Thread (EDT)
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new SwingTemplate();
+            }
+        });
     }
 }
-
