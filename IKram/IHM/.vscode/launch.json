@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MathFacile1",
+            "request": "launch",
+            "mainClass": "MathFacile1",
+            "projectName": "IHM_851337a5"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
@@ -15,7 +22,7 @@
             "name": "App",
             "request": "launch",
             "mainClass": "App",
-            "projectName": "IHM PROJET_95f1bb6e"
+            "projectName": "IHM_851337a5"
         }
     ]
 }
