@@ -23,22 +23,26 @@ public class Sld1 extends JFrame{
         this.setTitle("Main Slide");
         this.setSize(550, 650);
         this.setLayout(null);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
         
 
   /* -------label --------------- */
-   text = new ImageIcon();
 
-   lab =new JLabel(text);
-
+   text = new ImageIcon();//text 
+   lab =new JLabel(text);//text => label
    lab.setBounds(200,0,950,350);
    this.add(lab);
    this.pack();
+
+   /*------- play button----------- */
    play=new ImageIcon("play.png");
-   b1=new JButton(play);
-   b1.setBounds(470,450,290,110);
-   this.add(b1);
-   this.setVisible(true);
+     b1=new JButton(play);
+     b1.setBounds(470,450,290,110);
+     this.add(b1);
+
+     /*------ we must do it ------- */
+     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     this.setVisible(true);
 
 
    }
