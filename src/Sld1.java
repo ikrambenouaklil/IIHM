@@ -3,8 +3,28 @@ import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 public class Sld1 extends JFrame{ 
+
+
     //--- constructeur -------
-    Font GhostKidAOEPro ;
+    Font ghostKidAOEPro ;
+    // method to add a button
+    public JButton createTransparentButton(String text, String imagePath) {
+      JButton button = new JButton();
+
+      ImageIcon icon = new ImageIcon(imagePath);
+      button.setIcon(icon);
+      button.setText(text);
+      button.setHorizontalTextPosition(JLabel.CENTER);
+      button.setFont(ghostKidAOEPro.deriveFont(Font.BOLD, 50));
+
+      // Remove borders and set transparent background
+      button.setBorderPainted(false);
+      button.setOpaque(false);
+      button.setFocusPainted(false);
+      button.setBackground(new Color(255, 0, 0, 128));
+
+      return button;
+  }
   Sld1 ()  throws FontFormatException, IOException{
     /*------------add font ----------- */
    
@@ -39,18 +59,8 @@ panel.setBackground(yellow);
   //  panel.pack();
    
    /* play button */
-   play=new ImageIcon("play.png");
-     b1=new JButton(play);
-     b1.setBounds(470,450,290,110);
-     /*delete border*/ 
-b1.setBorderPainted(false); // Remove default border
-b1.setOpaque(false);      // Make background transparent
-b1.setFocusPainted(false); // Remove focus border (optional)
-button.setHorizontalTextPosition(JButton.CENTER);
-button.setVerticalTextPosition(JButton.CENTER);
-button.setForeground(new Color(255, 255, 255, 150)); // Semi-transparent text
-     panel.add(b1);
-  
+   JButton Play= createTransparentButton("Play", "play.png");
+panel.add(Play); 
 this.add(panel);
 
      /* we must do it  */
