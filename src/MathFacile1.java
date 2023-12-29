@@ -3,8 +3,9 @@ import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 
-import javax.swing.*; 
 public class MathFacile1 extends JFrame {
+
+   //------------add font -----------------
     Font GhostKidAOEPro ;
      MathFacile1() throws FontFormatException, IOException{
         //---------- add font ------------
@@ -16,13 +17,6 @@ public class MathFacile1 extends JFrame {
  
 }
 
-//      Font customFont2 = Font.createFont(Font.TRUETYPE_FONT, new File("SuperBoys-vmW67.ttf"));
-//     GraphicsEnvironment ge2 = GraphicsEnvironment.getLocalGraphicsEnvironment();
-//     ge2.registerFont(customFont2);
-
-
-// Font labelFont1 = customFont.deriveFont(); // Plain style, size 16
-// Font labelFont2 = customFont.deriveFont(); // Bold style, size 20
 
         /*------------------   add frame  -----------------*/
     this.setTitle("Baby Bear");
@@ -65,6 +59,7 @@ choix1.setFont(GhostKidAOEPro.deriveFont(Font.BOLD,50));
        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
        this.setVisible(true);
     }
+
     public static void main(String[] args) throws Exception {
         new MathFacile1();
     }
