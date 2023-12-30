@@ -49,13 +49,13 @@ public class MathFacile1 extends JFrame {
 
              
        /*-----------------bar qst----------- */
-        
+        JPanel qstpanel = new JPanel(); 
         ImageIcon imageMATHQSTF = new ImageIcon("math1+2.png"); 
         JLabel qstbar = new JLabel();
         qstbar.setIcon(imageMATHQSTF);
         qstbar.setHorizontalAlignment(JLabel.CENTER);
-
-
+        qstbar.setVerticalAlignment(JLabel.CENTER);
+ 
         // les choix
         JPanel southChoix = new JPanel();  
         southChoix.setLayout(new BorderLayout());
@@ -68,7 +68,7 @@ public class MathFacile1 extends JFrame {
         Vertical1.add(choix1,BorderLayout.NORTH);
         Vertical1.add(choix2,BorderLayout.SOUTH);
 
-
+Vertical1.setBackground(Color.MAGENTA); 
 
 southChoix.add(Vertical1,BorderLayout.EAST); 
 
@@ -81,7 +81,7 @@ JPanel Vertical2 = new JPanel() ;
      Vertical2.setLayout(new BorderLayout()); 
      Vertical2.add(choix3,BorderLayout.NORTH);
      Vertical2.add(choix4,BorderLayout.SOUTH);
-
+Vertical2.setBackground(Color.MAGENTA); 
      southChoix.add(Vertical2,BorderLayout.WEST); 
 
 
@@ -103,10 +103,12 @@ JPanel Vertical2 = new JPanel() ;
        
 
        /*make the panels bg transparent  */
-    //  panel.setOpaque(false);
-    //  panel2.setOpaque(false);
-    //  panel1.setOpaque(false);
-     
+   panel.setOpaque(false);
+   panel2.setOpaque(false);
+   panel1.setOpaque(false);
+   southChoix.setOpaque(false);
+   Vertical1.setOpaque(false);
+   Vertical2.setOpaque(false);
 /*----------------------must do it-----------------  */
 
     setVisible(true);
