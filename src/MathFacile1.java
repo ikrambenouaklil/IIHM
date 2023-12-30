@@ -2,86 +2,93 @@ import java.awt.*;
 import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
+import java.util.jar.JarFile;
 
 public class MathFacile1 extends JFrame {
     Font ghostKidAOEPro ;
-// une methode construit les 4 buttons du reponses 
-    public JButton createTransparentButton(String text, String imagePath) {
-      JButton button = new JButton();
-
-      ImageIcon icon = new ImageIcon(imagePath);
-      button.setIcon(icon);
-      button.setText(text);
-      button.setHorizontalTextPosition(JLabel.CENTER);
-      button.setFont(ghostKidAOEPro.deriveFont(Font.BOLD, 50));
-
-      // Remove borders and set transparent background
-      button.setBorderPainted(false);
-      button.setOpaque(false);
-      button.setFocusPainted(false);
-      button.setBackground(new Color(255, 0, 0, 128));
-
-      return button;
-  }
 
 
-     MathFacile1() throws FontFormatException, IOException{
-        //---------- add font ------------
-        try {
-  ghostKidAOEPro= Font.createFont(Font.TRUETYPE_FONT, new File("GhostKidAOE_Pro.ttf"));
-   GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-   ge.registerFont(ghostKidAOEPro);
-}catch (FontFormatException | IOException e) {
- 
-}
-
-
-        /*------------------   add frame  -----------------*/
-    this.setTitle("Baby Bear");
-    this.setSize(500, 500);
     
-JLabel background = new JLabel(new ImageIcon("BGQST.png")); 
 
-/*------------------   add panel 1  -----------------*/
-
-JPanel panel = new JPanel();
+  
 
 
-
-   /*-----------------bar qst----------- */
-  // image challenge 1 facile 
-
-   ImageIcon imageMATHQSTF = new ImageIcon("math1+2.png"); 
-
-    JLabel qstbar = new JLabel();
-    qstbar.setIcon(imageMATHQSTF); 
-
-// les choix 
-
-JButton choix1 = createTransparentButton("1", "labelchoix.png");
-JButton choix2 = createTransparentButton("2", "labelchoix.png");
-JButton choix3 = createTransparentButton("10", "labelchoix.png");
-JButton choix4 = createTransparentButton("20", "labelchoix.png");
-//
+    MathFacile1() throws FontFormatException, IOException{
 
 
+    
+  /*------------------   add frame  -----------------*/
+      
+        setTitle("Baby Bear");
+        setSize(500, 500);
+    //    setLayout(new BorderLayout());
+        /* add background  */
+        
+        JLabel background=new JLabel(new ImageIcon("qst bg.png"));
+        add(background);
+        background.setLayout(new BorderLayout());
+        
+        /*------------------   add panels  -----------------*/
+   
+        JPanel panel = new JPanel();
+        JPanel panel1 = new JPanel();
+        JPanel panel2 = new JPanel();
+   
+        panel.setBackground(Color.red);
+        panel1.setBackground(Color.blue);
+        panel2.setBackground(Color.yellow);
+                
+
+        // panel.setPreferredSize(new Dimension(100,100));//EAST
+        // panel1.setPreferredSize(new Dimension(100,100));//CENTER
+        // panel2.setPreferredSize(new Dimension(100,100));//SOUTH
+   
+
+             
+       /*-----------------bar qst----------- */
+        
+        ImageIcon imageMATHQSTF = new ImageIcon("math1+2.png"); 
+        JLabel qstbar = new JLabel();
+        qstbar.setIcon(imageMATHQSTF);
+        
+
+
+        // les choix 
+
+        JButton choix1 = CreateButt.createTransparentButton("3", "labelchoix.png");
+        JButton choix2 = CreateButt.createTransparentButton("4", "labelchoix.png");
+        JButton choix3 = CreateButt.createTransparentButton("6", "labelchoix.png");
+        JButton choix4 = CreateButt.createTransparentButton("10", "labelchoix.png");
+     
+        /*---------------menu button-------  */
+        JButton menu =   CreateButt.ButtonIcons( ""); 
+        panel.add(menu); 
 
 /*----------------partie li ndkhlhom kml fi b3dahum  */
-panel.add(choix1); 
-panel.add(choix2);
-panel.add(choix3);
-panel.add(choix4);
-panel.add(qstbar);
-this.add(background);
-  this.add(panel);
-  this.setLocationRelativeTo(null);// centrer le frame
-      
 
- 
 
+
+       panel1.add(qstbar);
+       panel1.add(choix1); 
+       panel1.add(choix2);
+       panel1.add(choix3);
+       panel1.add(choix4);
+       
+       setLocationRelativeTo(null);// centrer le frame
+       background.add(panel,BorderLayout.EAST);
+       background.add(panel1 ,BorderLayout.CENTER);
+       background.add(panel2,BorderLayout.SOUTH);
+
+       /*make the panels bg transparent  */
+    //  panel.setOpaque(false);
+    //  panel2.setOpaque(false);
+    //  panel1.setOpaque(false);
+     
 /*----------------------must do it-----------------  */
-       this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-       this.setVisible(true);
+
+    setVisible(true);
+    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
     }
 
     public static void main(String[] args) throws Exception {
