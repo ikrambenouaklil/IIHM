@@ -3,11 +3,5 @@
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
-    ],
-    "[java]": {
-        "editor.defaultFormatter": "remimarsal.prettier-now"
-    },
-    "editor.formatOnPaste": true,
-    "editor.defaultFormatter": "vscjava.vscode-java-pack",
-    "editor.formatOnSave": true
+    ]
 }

@@ -6,13 +6,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "test",
-            "request": "launch",
-            "mainClass": "test",
-            "projectName": "IIHM_7e969f75"
-        },
-        {
-            "type": "java",
             "name": "Sld1",
             "request": "launch",
             "mainClass": "Sld1",
