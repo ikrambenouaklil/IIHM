@@ -4,12 +4,12 @@ import java.io.File;
 import java.io.IOException;
 import java.util.jar.JarFile;
 //palestine facile 
-public class flagsfacile1 extends JFrame {
+public class flagsfacile2 extends JFrame {
         Font ghostKidAOEPro ;
         
 
 
-    flagsfacile1() throws FontFormatException, IOException{
+    flagsfacile2() throws FontFormatException, IOException{
 
      
      try {
@@ -22,10 +22,10 @@ public class flagsfacile1 extends JFrame {
 //-------------------bg-------------------//-------------------bg-------------------
 
         JLabel background=new JLabel(new ImageIcon("qst bg.png"));
-        ImageIcon imageMATHQSTF = new ImageIcon("palestine.png"); //la question 
+        ImageIcon imageMATHQSTF = new ImageIcon("usa.png"); //la question 
         //--------------------les cohoix----------------- 
         JButton choix1 = Create .createTransparentButton("USA", "labelchoix.png");
-        JButton choix2 = Create .createTransparentButton("Palestine", "labelchoix.png");
+        JButton choix2 = Create .createTransparentButton("UK", "labelchoix.png");
         JButton choix3 = Create .createTransparentButton("France", "labelchoix.png");
         JButton choix4 = Create .createTransparentButton("Tunisia", "labelchoix.png");
         JButton menu =   Create .ButtonIcons( "menue.png"); // menu button 
@@ -144,6 +144,6 @@ panel1.add(panel2 ,gbc);
     }
 
     public static void main(String[] args) throws Exception {
-        new flagsfacile1();
+        new flagsfacile2();
     }
 }
