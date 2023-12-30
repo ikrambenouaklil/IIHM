@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.jar.JarFile;
 
-public class CreateButt{
+public class Create {
     static Font ghostKidAOEPro ; 
     public  static JButton ButtonIcons( String imagePath) {
         // une methode construit les 4 buttons du reponses 
@@ -47,5 +47,8 @@ public class CreateButt{
     
         return button;
     }
+
+   
+
 
 }

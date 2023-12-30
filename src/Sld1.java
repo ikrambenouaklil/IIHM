@@ -37,7 +37,7 @@ panel.setBackground(yellow);
   //  panel.pack();
    
    /* play button */
-JButton Play= CreateButt.createTransparentButton("Play", "play.png");
+JButton Play= Create .createTransparentButton("Play", "play.png");
 panel.add(Play); 
 this.add(panel);
 

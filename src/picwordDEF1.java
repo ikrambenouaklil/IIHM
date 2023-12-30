@@ -4,34 +4,52 @@ import java.io.File;
 import java.io.IOException;
 import java.util.jar.JarFile;
 
-public class MathFacile1 extends JFrame {
-    Font ghostKidAOEPro ;
+
+// challenge 2 eme ta3 word and image  defficile  FOX 
+public class picwordDEF1 extends JFrame {
+        Font ghostKidAOEPro ;
+        
 
 
-
-    MathFacile1() throws FontFormatException, IOException{
+    picwordDEF1() throws FontFormatException, IOException{
 
      
      try {
          ghostKidAOEPro= Font.createFont(Font.TRUETYPE_FONT, new File("GhostKidAOE_Pro.ttf"));
          GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
          ge.registerFont(ghostKidAOEPro);
-       }catch (FontFormatException | IOException e) {
-       }
-  /*------------------   add frame  -----------------*/
-      
-        setTitle("Baby Bear");
-        setSize(1000, 1000);
-        
-        /* add background  */
-        
+        }catch (FontFormatException | IOException e) {
+        } 
+        //-------to change -------------------
+//-------------------bg-------------------
         JLabel background=new JLabel(new ImageIcon("qst bg.png"));
-        add(background);
-        background.setLayout(new BorderLayout());
+        ImageIcon imageMATHQSTF = new ImageIcon("fox.png"); //la question 
+        //--------------------les cohoix----------------- 
+        JButton choix1 = Create .createTransparentButton("Fanek", "labelchoix.png");
+        JButton choix2 = Create .createTransparentButton("Tiger", "labelchoix.png");
+        JButton choix3 = Create .createTransparentButton("Fox", "labelchoix.png");
+        JButton choix4 = Create .createTransparentButton("Cat", "labelchoix.png");
+        JButton menu =   Create .ButtonIcons( "menue.png"); // menu button 
+        //----------------lktiba li mtht 
+        JPanel panel2 = new JPanel(); 
+        JLabel qst = new JLabel(); 
+        qst.setText("Which word matches the picture?");
+
         
-        /*------------------   add panels  -----------------*/
-   
-        JPanel panel = new JPanel();
+        /*------------------   add frame  -----------------*/
+
+  
+  setSize(1000, 1000);
+  setTitle("Baby Bear");
+  /* add background  */
+  
+  
+  add(background);
+  background.setLayout(new BorderLayout());
+  
+  /*------------------   add panels  -----------------*/
+  
+  JPanel panel = new JPanel();
         JPanel panel1 = new JPanel();
     
 
@@ -52,11 +70,8 @@ public class MathFacile1 extends JFrame {
 
              
        /*-----------------bar qst----------- */
-        
-        ImageIcon imageMATHQSTF = new ImageIcon("math1+2.png"); 
         JLabel qstbar = new JLabel();
         qstbar.setIcon(imageMATHQSTF);
- 
         
         gbc.gridx =1 ;
         gbc.gridy =0;
@@ -67,10 +82,6 @@ public class MathFacile1 extends JFrame {
         
         // les choix 
 
-        JButton choix1 = Create .createTransparentButton("3", "labelchoix.png");
-        JButton choix2 = Create .createTransparentButton("4", "labelchoix.png");
-        JButton choix3 = Create .createTransparentButton("6", "labelchoix.png");
-        JButton choix4 = Create .createTransparentButton("10", "labelchoix.png");
        
 //-----------------------
         gbc.gridx =1;
@@ -94,10 +105,6 @@ panel1.add(choix4,gbc);
 
 
         /* qst  */
-
-        JPanel panel2 = new JPanel(); 
-        JLabel qst = new JLabel(); 
-         qst.setText("What's The Result ?");
          qst.setForeground(new Color(0X7E5001));
          qst.setFont(ghostKidAOEPro.deriveFont(Font.BOLD, 30)); 
          gbc.gridx =0;
@@ -112,7 +119,6 @@ panel1.add(choix4,gbc);
 panel1.add(panel2 ,gbc); 
 
          /*---------------menu button-------  */
-        JButton menu =   Create .ButtonIcons( "menue.png"); 
         panel.add(menu);
        /*----------------partie li ndkhlhom kml fi b3dahum  */
 
@@ -138,6 +144,6 @@ panel1.add(panel2 ,gbc);
     }
 
     public static void main(String[] args) throws Exception {
-        new MathFacile1();
+        new picwordDEF1();
     }
 }

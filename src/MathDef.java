@@ -4,12 +4,12 @@ import java.io.File;
 import java.io.IOException;
 import java.util.jar.JarFile;
 
-public class MathFacile1 extends JFrame {
+public class MathDef extends JFrame {
     Font ghostKidAOEPro ;
 
 
 
-    MathFacile1() throws FontFormatException, IOException{
+    MathDef() throws FontFormatException, IOException{
 
      
      try {
@@ -21,7 +21,7 @@ public class MathFacile1 extends JFrame {
   /*------------------   add frame  -----------------*/
       
         setTitle("Baby Bear");
-        setSize(1000, 1000);
+         setSize(1000, 1000);
         
         /* add background  */
         
@@ -53,10 +53,9 @@ public class MathFacile1 extends JFrame {
              
        /*-----------------bar qst----------- */
         
-        ImageIcon imageMATHQSTF = new ImageIcon("math1+2.png"); 
+        ImageIcon imageMATHQSTF = new ImageIcon(""); 
         JLabel qstbar = new JLabel();
         qstbar.setIcon(imageMATHQSTF);
- 
         
         gbc.gridx =1 ;
         gbc.gridy =0;
@@ -67,10 +66,10 @@ public class MathFacile1 extends JFrame {
         
         // les choix 
 
-        JButton choix1 = Create .createTransparentButton("3", "labelchoix.png");
-        JButton choix2 = Create .createTransparentButton("4", "labelchoix.png");
-        JButton choix3 = Create .createTransparentButton("6", "labelchoix.png");
-        JButton choix4 = Create .createTransparentButton("10", "labelchoix.png");
+        JButton choix1 = Create .createTransparentButton("461", "labelchoix.png");
+        JButton choix2 = Create .createTransparentButton("361", "labelchoix.png");
+        JButton choix3 = Create .createTransparentButton("161", "labelchoix.png");
+        JButton choix4 = Create .createTransparentButton("262", "labelchoix.png");
        
 //-----------------------
         gbc.gridx =1;
@@ -138,6 +137,6 @@ panel1.add(panel2 ,gbc);
     }
 
     public static void main(String[] args) throws Exception {
-        new MathFacile1();
+        new MathDef();
     }
 }
