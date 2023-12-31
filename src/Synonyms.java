@@ -4,11 +4,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.jar.JarFile;
 
-//challenge 2 word pic facile  elephant
-public class picword2 extends JFrame {
+//palestine facile 
+public class Synonyms extends JFrame {
         Font ghostKidAOEPro;
 
-        picword2() throws FontFormatException, IOException {
+        Synonyms() throws FontFormatException, IOException {
 
                 try {
                         ghostKidAOEPro = Font.createFont(Font.TRUETYPE_FONT, new File("GhostKidAOE_Pro.ttf"));
@@ -17,19 +17,20 @@ public class picword2 extends JFrame {
                 } catch (FontFormatException | IOException e) {
                 }
                 // -------to change -------------------
-                // -------------------bg-------------------
+                // -------------------bg-------------------//-------------------bg-------------------
+
                 JLabel background = new JLabel(new ImageIcon("qst bg.png"));
-                ImageIcon imageMATHQSTF = new ImageIcon("elephant.png"); // la question
+                ImageIcon imageMATHQSTF = new ImageIcon("happy.png"); // la question
                 // --------------------les cohoix-----------------
-                JButton choix1 = Create.createTransparentButton("bear", "labelchoix.png", 50);
-                JButton choix2 = Create.createTransparentButton("Elephant", "labelchoix.png", 50);
-                JButton choix3 = Create.createTransparentButton("tiger", "labelchoix.png", 50);
-                JButton choix4 = Create.createTransparentButton("cat", "labelchoix.png", 50);
+                JButton choix1 = Create.createTransparentButton("sad", "labelchoix.png", 50);
+                JButton choix2 = Create.createTransparentButton("Bad", "labelchoix.png", 50);
+                JButton choix3 = Create.createTransparentButton("cheerful", "labelchoix.png", 50);
+                JButton choix4 = Create.createTransparentButton("false", "labelchoix.png", 50);
                 JButton menu = Create.ButtonIcons("menue.png"); // menu button
                 // ----------------lktiba li mtht
                 JPanel panel2 = new JPanel();
                 JLabel qst = new JLabel();
-                qst.setText("Which word matches the picture?");
+                qst.setText("Choose the synonym");
 
                 /*------------------   add frame  -----------------*/
 
@@ -127,6 +128,6 @@ public class picword2 extends JFrame {
         }
 
         public static void main(String[] args) throws Exception {
-                new picword2();
+                new Synonyms();
         }
 }

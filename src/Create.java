@@ -23,7 +23,7 @@ public class Create {
         return button;}
     
 
-          public  static JButton createTransparentButton(String text, String imagePath) {
+          public  static JButton createTransparentButton(String text, String imagePath,int size) {
         JButton button = new JButton();
      try {
          ghostKidAOEPro= Font.createFont(Font.TRUETYPE_FONT, new File("GhostKidAOE_Pro.ttf"));
@@ -37,7 +37,7 @@ public class Create {
         button.setText(text);
         button.setForeground(new Color(0X7E5001));
         button.setHorizontalTextPosition(JLabel.CENTER);
-        button.setFont(ghostKidAOEPro.deriveFont(Font.BOLD, 50));
+        button.setFont(ghostKidAOEPro.deriveFont(Font.BOLD, size));
     
         // Remove borders and set transparent background
         button.setBorderPainted(false);

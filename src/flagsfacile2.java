@@ -3,147 +3,132 @@ import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.jar.JarFile;
+
 //palestine facile 
 public class flagsfacile2 extends JFrame {
-        Font ghostKidAOEPro ;
-        
+        Font ghostKidAOEPro;
 
+        flagsfacile2() throws FontFormatException, IOException {
 
-    flagsfacile2() throws FontFormatException, IOException{
+                try {
+                        ghostKidAOEPro = Font.createFont(Font.TRUETYPE_FONT, new File("GhostKidAOE_Pro.ttf"));
+                        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+                        ge.registerFont(ghostKidAOEPro);
+                } catch (FontFormatException | IOException e) {
+                }
+                // -------to change -------------------
+                // -------------------bg-------------------//-------------------bg-------------------
 
-     
-     try {
-         ghostKidAOEPro= Font.createFont(Font.TRUETYPE_FONT, new File("GhostKidAOE_Pro.ttf"));
-         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-         ge.registerFont(ghostKidAOEPro);
-        }catch (FontFormatException | IOException e) {
-        } 
-        //-------to change -------------------
-//-------------------bg-------------------//-------------------bg-------------------
+                JLabel background = new JLabel(new ImageIcon("qst bg.png"));
+                ImageIcon imageMATHQSTF = new ImageIcon("usa.png"); // la question
+                // --------------------les cohoix-----------------
+                JButton choix1 = Create.createTransparentButton("USA", "labelchoix.png", 50);
+                JButton choix2 = Create.createTransparentButton("Uk", "labelchoix.png", 50);
+                JButton choix3 = Create.createTransparentButton("France", "labelchoix.png", 50);
+                JButton choix4 = Create.createTransparentButton("Tunisia", "labelchoix.png", 50);
+                JButton menu = Create.ButtonIcons("menue.png"); // menu button
+                // ----------------lktiba li mtht
+                JPanel panel2 = new JPanel();
+                JLabel qst = new JLabel();
+                qst.setText("Choose the right flag in the picture");
+                qst.setText("Choose the right flag in the picture");
 
-        JLabel background=new JLabel(new ImageIcon("qst bg.png"));
-        ImageIcon imageMATHQSTF = new ImageIcon("usa.png"); //la question 
-        //--------------------les cohoix----------------- 
-        JButton choix1 = Create .createTransparentButton("USA", "labelchoix.png");
-        JButton choix2 = Create .createTransparentButton("UK", "labelchoix.png");
-        JButton choix3 = Create .createTransparentButton("France", "labelchoix.png");
-        JButton choix4 = Create .createTransparentButton("Tunisia", "labelchoix.png");
-        JButton menu =   Create .ButtonIcons( "menue.png"); // menu button 
-        //----------------lktiba li mtht 
-        JPanel panel2 = new JPanel(); 
-        JLabel qst = new JLabel(); 
-        qst.setText("Choose the right flag in the picture");        qst.setText("Choose the right flag in the picture");
+                /*------------------   add frame  -----------------*/
 
+                setSize(1000, 1000);
+                setTitle("Baby Bear");
 
-        
-        /*------------------   add frame  -----------------*/
+                ImageIcon icon = new ImageIcon("BabyBearIcon.png");
+                this.setIconImage(icon.getImage());
+                /* add background */
 
-  
-  setSize(1000, 1000);
-  setTitle("Baby Bear");
-  /* add background  */
-  
-  
-  add(background);
-  background.setLayout(new BorderLayout());
-  
-  /*------------------   add panels  -----------------*/
-  
-  JPanel panel = new JPanel();
-        JPanel panel1 = new JPanel();
-    
+                add(background);
+                background.setLayout(new BorderLayout());
 
-        GridBagConstraints gbc = new  GridBagConstraints(); 
-        GridBagLayout layout = new GridBagLayout(); 
-        panel1.setLayout(layout);
-//test
+                /*------------------   add panels  -----------------*/
 
-        panel.setBackground(Color.red);
-        panel1.setBackground(Color.blue);
-     
-                
+                JPanel panel = new JPanel();
+                JPanel panel1 = new JPanel();
 
-       // panel.setPreferredSize(new Dimension(100,100));//EAST
-        // panel1.setPreferredSize(new Dimension(100,100));//CENTER
-        // panel2.setPreferredSize(new Dimension(100,100));//SOUTH
-   
+                GridBagConstraints gbc = new GridBagConstraints();
+                GridBagLayout layout = new GridBagLayout();
+                panel1.setLayout(layout);
+                // test
 
-             
-       /*-----------------bar qst----------- */
-        JLabel qstbar = new JLabel();
-        qstbar.setIcon(imageMATHQSTF);
-        
-        gbc.gridx =1 ;
-        gbc.gridy =0;
-        gbc.gridwidth =2;
-        gbc.gridheight =1;
-       gbc.insets = new Insets(20,0,0,0); 
-        panel1.add(qstbar,gbc);
-        
-        // les choix 
+                panel.setBackground(Color.red);
+                panel1.setBackground(Color.blue);
 
-       
-//-----------------------
-        gbc.gridx =1;
-        gbc.gridy =1;
-        gbc.gridwidth =1;
-        
-         gbc.insets = new Insets(0,0,0,0); 
-panel1.add(choix1,gbc); 
-//-----------------------
-        gbc.gridx = 2;
-        gbc.gridy =1;
-panel1.add(choix2,gbc); 
-//-----------------------
-        gbc.gridx =1;
-        gbc.gridy =2;
-panel1.add(choix3,gbc); 
-//-----------------------
-        gbc.gridx =2;
-panel1.add(choix4,gbc); 
-         
+                // panel.setPreferredSize(new Dimension(100,100));//EAST
+                // panel1.setPreferredSize(new Dimension(100,100));//CENTER
+                // panel2.setPreferredSize(new Dimension(100,100));//SOUTH
 
+                /*-----------------bar qst----------- */
+                JLabel qstbar = new JLabel();
+                qstbar.setIcon(imageMATHQSTF);
 
-        /* qst  */
-         qst.setForeground(new Color(0X7E5001));
-         qst.setFont(ghostKidAOEPro.deriveFont(Font.BOLD, 30)); 
-         gbc.gridx =0;
-        gbc.gridy =8;
-        gbc.gridwidth =4;      
-        gbc.gridheight =1;
-         gbc.insets = new Insets(20,10,0,0); 
+                gbc.gridx = 1;
+                gbc.gridy = 0;
+                gbc.gridwidth = 2;
+                gbc.gridheight = 1;
+                gbc.insets = new Insets(20, 0, 0, 0);
+                panel1.add(qstbar, gbc);
 
- panel2.add(qst); 
-        gbc.fill =GridBagConstraints.HORIZONTAL;
-        
-panel1.add(panel2 ,gbc); 
+                // les choix
 
-         /*---------------menu button-------  */
-        panel.add(menu);
-       /*----------------partie li ndkhlhom kml fi b3dahum  */
+                // -----------------------
+                gbc.gridx = 1;
+                gbc.gridy = 1;
+                gbc.gridwidth = 1;
 
+                gbc.insets = new Insets(0, 0, 0, 0);
+                panel1.add(choix1, gbc);
+                // -----------------------
+                gbc.gridx = 2;
+                gbc.gridy = 1;
+                panel1.add(choix2, gbc);
+                // -----------------------
+                gbc.gridx = 1;
+                gbc.gridy = 2;
+                panel1.add(choix3, gbc);
+                // -----------------------
+                gbc.gridx = 2;
+                panel1.add(choix4, gbc);
 
+                /* qst */
+                qst.setForeground(new Color(0X7E5001));
+                qst.setFont(ghostKidAOEPro.deriveFont(Font.BOLD, 30));
+                gbc.gridx = 0;
+                gbc.gridy = 8;
+                gbc.gridwidth = 4;
+                gbc.gridheight = 1;
+                gbc.insets = new Insets(20, 10, 0, 0);
 
-       
+                panel2.add(qst);
+                gbc.fill = GridBagConstraints.HORIZONTAL;
 
-       setLocationRelativeTo(null);// centrer le frame
-       background.add(panel,BorderLayout.EAST);
-       background.add(panel1 ,BorderLayout.CENTER);
-       
-       
-       /*make the panels bg transparent  */
-     panel.setOpaque(false);
-     panel1.setOpaque(false);
- panel2.setOpaque(false);
-     
-/*----------------------must do it-----------------  */
+                panel1.add(panel2, gbc);
 
-    setVisible(true);
-    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                /*---------------menu button-------  */
+                panel.add(menu);
+                /*----------------partie li ndkhlhom kml fi b3dahum  */
 
-    }
+                setLocationRelativeTo(null);// centrer le frame
+                background.add(panel, BorderLayout.EAST);
+                background.add(panel1, BorderLayout.CENTER);
 
-    public static void main(String[] args) throws Exception {
-        new flagsfacile2();
-    }
+                /* make the panels bg transparent */
+                panel.setOpaque(false);
+                panel1.setOpaque(false);
+                panel2.setOpaque(false);
+
+                /*----------------------must do it-----------------  */
+
+                setVisible(true);
+                setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        }
+
+        public static void main(String[] args) throws Exception {
+                new flagsfacile2();
+        }
 }
