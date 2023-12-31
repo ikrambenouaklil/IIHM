@@ -47,7 +47,7 @@ public class MathDef extends JFrame {
 
                 /*-----------------bar qst----------- */
 
-                ImageIcon imageMATHQSTF = new ImageIcon("");
+                ImageIcon imageMATHQSTF = new ImageIcon("mathhard.png");
                 JLabel qstbar = new JLabel();
                 qstbar.setIcon(imageMATHQSTF);
 

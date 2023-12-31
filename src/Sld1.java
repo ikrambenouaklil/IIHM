@@ -18,9 +18,10 @@ public class Sld1 extends JFrame{
    ImageIcon play;
      JButton b1;
 /* -------frame --------------- */
-        this.setTitle("Main Slide");
+        this.setTitle("Baby Bear");
         this.setSize(550, 650);
-        
+        ImageIcon icon = new ImageIcon("BabyBearIcon.png");
+        this.setIconImage(icon.getImage());
        
 /*-------panel ------- */
 

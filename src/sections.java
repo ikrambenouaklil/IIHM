@@ -26,11 +26,11 @@ public class sections extends JFrame {
 
         JLabel background=new JLabel(new ImageIcon("sections.png"));
     
-        JButton choix1 = Create .createTransparentButton("USA", "sectionslabel.png", 30);
-        JButton choix2 = Create .createTransparentButton("Palestine", "sectionslabel.png", 30);
-        JButton choix3 = Create .createTransparentButton("France", "sectionslabel.png", 30);
-        JButton choix4 = Create .createTransparentButton("Tunisia", "sectionslabel.png", 30);
-        JButton menu =   Create .ButtonIcons( "menue.png"); // menu button 
+        JButton choix1 = Create .createTransparentButton("Math", "sectionslabel.png", 28);
+        JButton choix2 = Create .createTransparentButton("Synonyms", "sectionslabel.png", 28);
+        JButton choix3 = Create .createTransparentButton("Pictures", "sectionslabel.png", 28);
+        JButton choix4 = Create .createTransparentButton("Flags", "sectionslabel.png",28 );
+        JButton menu =   Create .ButtonIcons( "out.png"); // menu button 
     
 //---------button menu 
 JButton icomenu = Create.ButtonIcons( "out.png");

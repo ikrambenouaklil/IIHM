@@ -34,6 +34,8 @@ public class picword extends JFrame {
 
                 setSize(1000, 1000);
                 setTitle("Baby Bear");
+                ImageIcon icon = new ImageIcon("BabyBearIcon.png");
+                this.setIconImage(icon.getImage());
                 /* add background */
 
                 add(background);

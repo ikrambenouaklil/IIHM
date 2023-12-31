@@ -24,10 +24,11 @@ public class Synonyms2 extends JFrame {
         JLabel background=new JLabel(new ImageIcon("qst bg.png"));
         ImageIcon imageMATHQSTF = new ImageIcon("sad.png"); //la question 
         //--------------------les cohoix----------------- 
-        JButton choix1 = Create .createTransparentButton("Unhappy", "labelchoix.png", 50);
-        JButton choix2 = Create .createTransparentButton("cheerful", "labelchoix.png", 50);
-        JButton choix3 = Create .createTransparentButton("Bad", "labelchoix.png", 50);
-        JButton choix4 = Create .createTransparentButton("false", "labelchoix.png",50);
+        JButton choix1 = Create.createTransparentButton("Unhappy", "labelchoix.png", 50);
+        JButton choix2 = Create.createTransparentButton("cheerful", "labelchoix.png", 50);
+        JButton choix3 = Create.createTransparentButton("Bad", "labelchoix.png", 50);
+        JButton choix4 = Create.createTransparentButton("false", "labelchoix.png",50);
+        // ---------------menu button ----------
         JButton menu =   Create .ButtonIcons( "menue.png"); // menu button 
         //----------------lktiba li mtht 
         JPanel panel2 = new JPanel(); 

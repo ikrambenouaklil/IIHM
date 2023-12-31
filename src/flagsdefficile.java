@@ -4,10 +4,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.jar.JarFile;
 
-public class picwordDEF extends JFrame {
+//palestine facile 
+public class flagsdefficile extends JFrame {
         Font ghostKidAOEPro;
 
-        picwordDEF() throws FontFormatException, IOException {
+        flagsdefficile() throws FontFormatException, IOException {
 
                 try {
                         ghostKidAOEPro = Font.createFont(Font.TRUETYPE_FONT, new File("GhostKidAOE_Pro.ttf"));
@@ -16,19 +17,21 @@ public class picwordDEF extends JFrame {
                 } catch (FontFormatException | IOException e) {
                 }
                 // -------to change -------------------
-                // -------------------bg-------------------
+                // -------------------bg-------------------//-------------------bg-------------------
+
                 JLabel background = new JLabel(new ImageIcon("qst bg.png"));
-                ImageIcon imageMATHQSTF = new ImageIcon("hawk.png"); // la question
+                ImageIcon imageMATHQSTF = new ImageIcon("usa.png"); // la question
                 // --------------------les cohoix-----------------
-                JButton choix1 = Create.createTransparentButton("Owl", "labelchoix.png", 50);
-                JButton choix2 = Create.createTransparentButton("Bird", "labelchoix.png", 50);
-                JButton choix3 = Create.createTransparentButton("hawk", "labelchoix.png", 50);
-                JButton choix4 = Create.createTransparentButton("goshawk", "labelchoix.png", 50);
+                JButton choix1 = Create.createTransparentButton("Liberia", "labelchoix.png", 50);
+                JButton choix2 = Create.createTransparentButton("Norway", "labelchoix.png", 50);
+                JButton choix3 = Create.createTransparentButton("Australia", "labelchoix.png", 50);
+                JButton choix4 = Create.createTransparentButton("USA", "labelchoix.png", 50);
                 JButton menu = Create.ButtonIcons("menue.png"); // menu button
                 // ----------------lktiba li mtht
                 JPanel panel2 = new JPanel();
                 JLabel qst = new JLabel();
-                qst.setText("Which word matches the picture?");
+                qst.setText("Choose the right flag in the picture");
+                qst.setText("Choose the right flag in the picture");
 
                 /*------------------   add frame  -----------------*/
 
@@ -125,6 +128,6 @@ public class picwordDEF extends JFrame {
         }
 
         public static void main(String[] args) throws Exception {
-                new picwordDEF();
+                new flagsdefficile();
         }
 }

@@ -22,10 +22,10 @@ public class flagsfacile1 extends JFrame {
                 JLabel background = new JLabel(new ImageIcon("qst bg.png"));
                 ImageIcon imageMATHQSTF = new ImageIcon("palestine.png"); // la question
                 // --------------------les cohoix-----------------
-                JButton choix1 = Create.createTransparentButton("USA", "labelchoix.png", 50);
+                JButton choix1 = Create.createTransparentButton("Marroco", "labelchoix.png", 50);
                 JButton choix2 = Create.createTransparentButton("Palestine", "labelchoix.png", 50);
-                JButton choix3 = Create.createTransparentButton("France", "labelchoix.png", 50);
-                JButton choix4 = Create.createTransparentButton("Tunisia", "labelchoix.png", 50);
+                JButton choix3 = Create.createTransparentButton("Egypt", "labelchoix.png", 50);
+                JButton choix4 = Create.createTransparentButton("Algeria", "labelchoix.png", 50);
                 JButton menu = Create.ButtonIcons("menue.png"); // menu button
                 // ----------------lktiba li mtht
                 JPanel panel2 = new JPanel();
@@ -37,6 +37,8 @@ public class flagsfacile1 extends JFrame {
 
                 setSize(1000, 1000);
                 setTitle("Baby Bear");
+                ImageIcon icon = new ImageIcon("BabyBearIcon.png");
+                this.setIconImage(icon.getImage());
                 /* add background */
 
                 add(background);
