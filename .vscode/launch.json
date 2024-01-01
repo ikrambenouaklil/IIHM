@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Congrats",
+            "request": "launch",
+            "mainClass": "Congrats",
+            "projectName": "IIHM_7e969f75"
+        },
+        {
+            "type": "java",
+            "name": "Correct",
+            "request": "launch",
+            "mainClass": "Correct",
+            "projectName": "IIHM_7e969f75"
+        },
+        {
+            "type": "java",
+            "name": "Wrong",
+            "request": "launch",
+            "mainClass": "Wrong",
+            "projectName": "IIHM_7e969f75"
+        },
+        {
+            "type": "java",
             "name": "Sld1",
             "request": "launch",
             "mainClass": "Sld1",
