@@ -5,7 +5,7 @@ import java.io.IOException;
 public class Congrats extends JFrame {
 
     Congrats() throws FontFormatException, IOException {
-        setTitle("Baby Bear");src/Congrats.java src/Correct.java
+        setTitle("Baby Bear");
         setSize(1000, 1000);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -31,7 +31,7 @@ public class Congrats extends JFrame {
     }
 
     private void addButton(JPanel panel, String iconpath, int gridx, int gridy) {
-        JButton button = CreateButt.ButtonIcons(iconpath);
+        JButton button = Create.ButtonIcons(iconpath);
         GridBagConstraints constraints = new GridBagConstraints();
         constraints.gridx = gridx;
         constraints.gridy = gridy;
