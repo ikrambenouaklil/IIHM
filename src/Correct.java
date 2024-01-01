@@ -37,7 +37,7 @@ public class Correct extends JFrame {
         constraints.gridx = gridx;
         constraints.gridy = gridy;
         constraints.fill = GridBagConstraints.HORIZONTAL;
-        constraints.insets.set(50, 0, 5, 5); // Marges
+        constraints.insets.set(40, 0, 5, 5); // Marges
 
         panel.add(button, constraints);
     }
