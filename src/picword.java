@@ -8,14 +8,15 @@ public class picword extends JFrame {
         Font ghostKidAOEPro;
 
         picword() throws FontFormatException, IOException {
-
+// add font 
                 try {
                         ghostKidAOEPro = Font.createFont(Font.TRUETYPE_FONT, new File("GhostKidAOE_Pro.ttf"));
                         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
                         ge.registerFont(ghostKidAOEPro);
                 } catch (FontFormatException | IOException e) {
                 }
-                // -------to change -------------------
+
+  // -------to change -------------------
                 // -------------------bg-------------------
                 JLabel background = new JLabel(new ImageIcon("qst bg.png"));
                 ImageIcon imageMATHQSTF = new ImageIcon("tiger.png"); // la question
