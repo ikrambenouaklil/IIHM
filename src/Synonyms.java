@@ -1,12 +1,15 @@
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
-import java.util.jar.JarFile;
 
 //palestine facile 
-public class Synonyms extends JFrame {
+public class Synonyms extends JFrame implements ActionListener {
         Font ghostKidAOEPro;
+       JButton choix1 ,choix2 ,choix3 ,choix4 ,menu ;
 
         Synonyms() throws FontFormatException, IOException {
 
@@ -22,11 +25,17 @@ public class Synonyms extends JFrame {
                 JLabel background = new JLabel(new ImageIcon("qst bg.png"));
                 ImageIcon imageMATHQSTF = new ImageIcon("happy.png"); // la question
                 // --------------------les cohoix-----------------
-                JButton choix1 = Create.createTransparentButton("sad", "labelchoix.png", 50);
-                JButton choix2 = Create.createTransparentButton("Bad", "labelchoix.png", 50);
-                JButton choix3 = Create.createTransparentButton("cheerful", "labelchoix.png", 50);
-                JButton choix4 = Create.createTransparentButton("false", "labelchoix.png", 50);
-                JButton menu = Create.ButtonIcons("menue.png"); // menu button
+                choix1 = Create.createTransparentButton("sad", "labelchoix.png", 50);
+                choix1.addActionListener(this);
+                choix2 = Create.createTransparentButton("Bad", "labelchoix.png", 50);
+                choix2.addActionListener(this);
+                choix3 = Create.createTransparentButton("cheerful", "labelchoix.png", 50);
+                choix3.addActionListener(this);
+                choix4 = Create.createTransparentButton("false", "labelchoix.png", 50);
+                choix4.addActionListener(this);
+                menu = Create.ButtonIcons("Group-15302.png"); 
+                menu.addActionListener(this);
+                // menu button
                 // ----------------lktiba li mtht
                 JPanel panel2 = new JPanel();
                 JLabel qst = new JLabel();
@@ -56,10 +65,6 @@ public class Synonyms extends JFrame {
 
                 panel.setBackground(Color.red);
                 panel1.setBackground(Color.blue);
-
-                // panel.setPreferredSize(new Dimension(100,100));//EAST
-                // panel1.setPreferredSize(new Dimension(100,100));//CENTER
-                // panel2.setPreferredSize(new Dimension(100,100));//SOUTH
 
                 /*-----------------bar qst----------- */
                 JLabel qstbar = new JLabel();
@@ -127,7 +132,37 @@ public class Synonyms extends JFrame {
 
         }
 
+
+
+
+        public void actionPerformed(ActionEvent e) {
+     
+                if (e.getSource () == choix3) {
+                       setVisible(false);
+                   try {
+                   new Synonyms2 ();  }
+                    catch (FontFormatException | IOException e1) {
+                   // TODO Auto-generated catch block
+                   e1.printStackTrace();
+               }
+                   }
+                
+                 else{  
+                        if (e.getSource () == menu) {
+                       setVisible(false);
+                  try {
+                      new sections();}
+                       catch (FontFormatException | IOException e5) {
+                     // TODO Auto-generated catch block
+                      e5.printStackTrace();
+                 }
+                 }}
+
+               }
+
+
         public static void main(String[] args) throws Exception {
                 new Synonyms();
         }
 }
+

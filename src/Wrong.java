@@ -8,24 +8,18 @@ public class Wrong extends JFrame {
         setTitle("Baby Bear");
         setSize(1000, 1000);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
         // Ajout d'un fond d'écran
         JLabel background = new JLabel(new ImageIcon("wrong-1.png"));
         setContentPane(background);
         background.setLayout(new BorderLayout());
-
         JPanel panel = new JPanel();
         panel.setLayout(new GridBagLayout());
         panel.setOpaque(false); // Rend le panneau transparent
-
         // Ajout de vos boutons avec les contraintes GridBag
         addButton(panel, "Groupwc1.png", 0, 1);
-        addButton(panel, "Groupwc2.png", 1, 1);
         addButton(panel, "Groupwc3.png", 2, 1);
-
         // Ajout du panneau au bas du frame
         background.add(panel, BorderLayout.CENTER);
-
         setLocationRelativeTo(null); // Centrer le frame
         setVisible(true);
     }
@@ -37,8 +31,7 @@ public class Wrong extends JFrame {
         constraints.gridy = gridy;
         constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.insets.set(50, 0, 5, 5); // Marges
-        
-       
+
         panel.add(button, constraints);
     }
 

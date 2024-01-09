@@ -20,8 +20,8 @@ public class Correct extends JFrame {
 
         // Ajout de vos boutons avec les contraintes GridBag
         addButton(panel, "Groupwc1.png", 0, 1);
-        addButton(panel, "Groupwc2.png", 1, 1);
-        addButton(panel, "Groupwc3.png", 2, 1);
+        //addButton(panel, "Groupwc2.png", 1, 1);
+        //addButton(panel, "Groupwc3.png", 2, 1);
         addButton(panel, "Groupwc4.png", 3, 1);
 
         // Ajout du panneau au bas du frame

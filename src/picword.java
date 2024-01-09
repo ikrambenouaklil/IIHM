@@ -1,11 +1,16 @@
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
-import java.util.jar.JarFile;
 
-public class picword extends JFrame {
+
+public class picword extends JFrame implements ActionListener{
         Font ghostKidAOEPro;
+
+        JButton choix1 ,choix2 ,choix3 ,choix4 ,menu ;
 
         picword() throws FontFormatException, IOException {
 // add font 
@@ -21,11 +26,16 @@ public class picword extends JFrame {
                 JLabel background = new JLabel(new ImageIcon("qst bg.png"));
                 ImageIcon imageMATHQSTF = new ImageIcon("tiger.png"); // la question
                 // --------------------les cohoix-----------------
-                JButton choix1 = Create.createTransparentButton("Bear", "labelchoix.png", 50);
-                JButton choix2 = Create.createTransparentButton("Elephant", "labelchoix.png", 50);
-                JButton choix3 = Create.createTransparentButton("tiger", "labelchoix.png", 50);
-                JButton choix4 = Create.createTransparentButton("cat", "labelchoix.png", 50);
-                JButton menu = Create.ButtonIcons("menue.png"); // menu button
+                 choix1 = Create.createTransparentButton("Bear", "labelchoix.png", 50);
+                 choix1.addActionListener(this);
+                 choix2 = Create.createTransparentButton("Elephant", "labelchoix.png", 50);
+                 choix2.addActionListener(this);
+                 choix3 = Create.createTransparentButton("tiger", "labelchoix.png", 50);
+                 choix3.addActionListener(this);
+                 choix4 = Create.createTransparentButton("cat", "labelchoix.png", 50);
+                 choix4.addActionListener(this);
+                 menu = Create.ButtonIcons("menue.png"); // menu button
+                 menu.addActionListener(this);
                 // ----------------lktiba li mtht
                 JPanel panel2 = new JPanel();
                 JLabel qst = new JLabel();
@@ -125,7 +135,34 @@ public class picword extends JFrame {
 
         }
 
-        // public static void main(String[] args) throws Exception {
-        //         new picword();
-        // }
+        public void actionPerformed(ActionEvent e) {
+     
+                if (e.getSource () == choix3) {
+                       setVisible(false);
+                   try {
+                   new picword2();  }
+                    catch (FontFormatException | IOException e1) {
+                   // TODO Auto-generated catch block
+                   e1.printStackTrace();
+               }
+                   }
+                
+                 else{  
+                        if (e.getSource () == menu) {
+                       setVisible(false);
+                  try {
+                      new sections();}
+                       catch (FontFormatException | IOException e5) {
+                     // TODO Auto-generated catch block
+                      e5.printStackTrace();
+                 }
+                 }}
+
+               }
+
+
+
+        public static void main(String[] args) throws Exception {
+                new picword();
+        }
 }

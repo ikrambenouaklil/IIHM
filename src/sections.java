@@ -1,18 +1,22 @@
+
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.jar.JarFile;
-//palestine facile 
-public class sections extends JFrame {
-        Font ghostKidAOEPro ;
+
+public class sections extends JFrame implements ActionListener {
         
+    Font ghostKidAOEPro ;
+        JButton choix1 ,choix2 ,choix3 ,choix4 ,icomenu;
 
 
-    sections() throws FontFormatException, IOException{
+     public sections() throws FontFormatException, IOException{
 
      
      try {
@@ -20,22 +24,28 @@ public class sections extends JFrame {
          GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
          ge.registerFont(ghostKidAOEPro);
         }catch (FontFormatException | IOException e) {
+
+            
         } 
         //-------to change -------------------
 //-------------------bg-------------------//-------------------bg-------------------
 
         JLabel background=new JLabel(new ImageIcon("sections.png"));
     
-        JButton choix1 = Create .createTransparentButton("Math", "sectionslabel.png", 28);
-        JButton choix2 = Create .createTransparentButton("Synonyms", "sectionslabel.png", 28);
-        JButton choix3 = Create .createTransparentButton("Pictures", "sectionslabel.png", 28);
-        JButton choix4 = Create .createTransparentButton("Flags", "sectionslabel.png",28 );
-        JButton menu =   Create .ButtonIcons( "out.png"); // menu button 
-    
-//---------button menu 
-JButton icomenu = Create.ButtonIcons( "out.png");
-        icomenu.setVerticalAlignment(SwingConstants.BOTTOM);
+        choix1 = Create .createTransparentButton("Math", "sectionslabel.png", 28);
+        choix1.addActionListener(this);
+        choix2 = Create .createTransparentButton("Synonyms", "Group 3.png", 28);
+        choix2.addActionListener(this);
+        choix3 = Create .createTransparentButton("Pictures", "Group 6.png", 28);
+        choix3.addActionListener(this);
+        choix4 = Create .createTransparentButton("Flags", "Group 5.png",28 );
+        choix4.addActionListener(this);
 
+        
+//---------button menu 
+       icomenu = Create.ButtonIcons( "out.png");
+        icomenu.setVerticalAlignment(SwingConstants.BOTTOM);
+        icomenu.addActionListener(this);
         /*------------------   add frame  -----------------*/
 
         
@@ -82,34 +92,10 @@ gbc.gridy=2;
         add(background);
        
 
-            
-             
-            
-  
-
-
-             
-
-     
-                
-
-     
-    
-        
-   
-
-
-
-        
        /*make the panels bg transparent  */
  pan.setOpaque(false);
     
 
-       
-     
-       
-      
-     
 /*----------------------must do it-----------------  */
     setLocationRelativeTo(null);// centrer le frame
     setVisible(true);
@@ -117,7 +103,67 @@ gbc.gridy=2;
 
     }
 
-    // public static void main(String[] args) throws Exception {
-    //     new sections();
-    // }
+
+   
+public void actionPerformed(ActionEvent e) {
+     
+     if (e.getSource () == choix1) {
+            setVisible(false);
+        try {
+        new MathFacile1();  }
+         catch (FontFormatException | IOException e1) {
+        // TODO Auto-generated catch block
+        e1.printStackTrace();
+    }
+        }
+     else{ 
+        if (e.getSource () == choix2) {
+            setVisible(false);
+        try {
+        new Synonyms();}
+         catch (FontFormatException | IOException e2) {
+        // TODO Auto-generated catch block
+        e2.printStackTrace();
+    }
+        }
+        else{
+     if (e.getSource () == choix3) {
+            setVisible(false);
+        try {
+        new picword();}
+         catch (FontFormatException | IOException e3) {
+        // TODO Auto-generated catch block
+        e3.printStackTrace();
+    }
+        }
+        else{
+     if (e.getSource () == choix4) {
+            setVisible(false);
+        try {
+
+        new flagsfacile1();
+    }
+         catch (FontFormatException | IOException e4) {
+        // TODO Auto-generated catch block
+        e4.printStackTrace();
+    }
+        
+    }
+     if (e.getSource () == icomenu) {
+            setVisible(false);
+        try {
+        new Sld1();}
+         catch (FontFormatException | IOException e5) {
+        // TODO Auto-generated catch block
+        e5.printStackTrace();
+    }
+        
+    }}
+     }}
+    }
+     
+    public static void main(String[] args) throws Exception {
+        new sections();
+        
+    }
 }

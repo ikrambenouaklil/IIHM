@@ -1,8 +1,13 @@
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
 import java.io.IOException;
 
-public class Congrats extends JFrame {
+public class Congrats extends JFrame implements ActionListener{
+
+     JButton menu ;
 
     Congrats() throws FontFormatException, IOException {
         setTitle("Baby Bear");
@@ -14,38 +19,39 @@ public class Congrats extends JFrame {
         setContentPane(background);
         background.setLayout(new BorderLayout());
 
+    
+        menu =  Create .ButtonIcons( "Group-15301.png");
+        menu.addActionListener(this);
+
+
         JPanel panel = new JPanel();
         panel.setLayout(new GridBagLayout());
         panel.setOpaque(false); // Rend le panneau transparent
-
-        // Ajout de vos boutons avec les contraintes GridBag
-        addButton(panel, "Group-15301.png", 0, 0);
-        addButton(panel, "Group-15302.png", 1, 0);
-        addButton(panel, "Group-15303.png", 2, 0);
 
         // Ajout du panneau au bas du frame
         background.add(panel, BorderLayout.SOUTH);
 
         setLocationRelativeTo(null); // Centrer le frame
         setVisible(true);
+    
+       panel.add(menu);
+    
+         
     }
 
-    private void addButton(JPanel panel, String iconpath, int gridx, int gridy) {
-        JButton button = Create.ButtonIcons(iconpath);
-        GridBagConstraints constraints = new GridBagConstraints();
-        constraints.gridx = gridx;
-        constraints.gridy = gridy;
-        constraints.fill = GridBagConstraints.HORIZONTAL;
-        constraints.insets.set(5, 5, 5, 5); // Marges
-
-        // Si c'est le dernier bouton, placez-le en bas de la grille
-        if (gridy == 0) {
-            constraints.weighty = 1.0; // Permet au composant de s'étendre verticalement
-            constraints.anchor = GridBagConstraints.PAGE_END; // Ancrage en bas
-        }
-
-        panel.add(button, constraints);
-    }
+        public void actionPerformed(ActionEvent e) {
+     
+            if (e.getSource () == menu) {
+                   setVisible(false);
+               try {
+               new Sld1 ();  }
+                catch (FontFormatException | IOException e1) {
+               // TODO Auto-generated catch block
+               e1.printStackTrace();
+           }
+               }
+            
+}
 
     public static void main(String[] args) throws Exception {
         new Congrats();
