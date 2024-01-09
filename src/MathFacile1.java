@@ -123,7 +123,7 @@ public class MathFacile1 extends JFrame {
 
         }
 
-        public static void main(String[] args) throws Exception {
-                new MathFacile1();
-        }
+        // public static void main(String[] args) throws Exception {
+        //         new MathFacile1();
+        // }
 }

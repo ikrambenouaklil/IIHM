@@ -42,8 +42,8 @@ public class Sld1 extends JFrame {
         panel.add(button, constraints);
     }
 
-    public static void main(String[] args) throws Exception {
-        new Sld1();
-    }
+    // public static void main(String[] args) throws Exception {
+    //     new Sld1();
+    // }
 }
 

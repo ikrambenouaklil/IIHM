@@ -126,7 +126,7 @@ public class picword2 extends JFrame {
 
         }
 
-        public static void main(String[] args) throws Exception {
-                new picword2();
-        }
+        // public static void main(String[] args) throws Exception {
+        //         new picword2();
+        // }
 }
