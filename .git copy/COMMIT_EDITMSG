@@ -1,0 +1,39 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch UPDATE1
+# Your branch is up to date with 'origin/UPDATE1'.
+#
+# Changes to be committed:
+#	renamed:    Groupwc2.png -> Menu.png
+#	renamed:    Groupwc4.png -> NEXT.png
+#	renamed:    Groupwc1.png -> OUTmar.png
+#	renamed:    Groupwc3.png -> REPLAY.png
+#	new file:   attentive.png
+#	new file:   fragile.png
+#	modified:   mathhard.png
+#	new file:   public/CongratsDEF.java
+#	renamed:    src/MathDef.java -> public/MathDef.java
+#	new file:   public/Synonyms2DEF.java
+#	new file:   public/SynonymsDEF.java
+#	renamed:    src/flagsdefficile.java -> public/flagsdefficile.java
+#	renamed:    src/flagsdefficile2.java -> public/flagsdefficile2.java
+#	deleted:    public/images/math-12.png
+#	renamed:    src/picwordDEF.java -> public/picwordDEF.java
+#	renamed:    src/picwordDEF1.java -> public/picwordDEF1.java
+#	new file:   public/sectionsDEF.java
+#	modified:   src/Congrats.java
+#	modified:   src/Correct.java
+#	modified:   src/Create.java
+#	modified:   src/MathFacile1.java
+#	modified:   src/Sld1.java
+#	modified:   src/Synonyms.java
+#	modified:   src/Synonyms2.java
+#	modified:   src/Wrong.java
+#	modified:   src/flagsfacile1.java
+#	modified:   src/flagsfacile2.java
+#	modified:   src/picword.java
+#	modified:   src/picword2.java
+#	modified:   src/sections.java
+#

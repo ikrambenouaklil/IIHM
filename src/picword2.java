@@ -1,3 +1,4 @@
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,10 +8,10 @@ import java.io.File;
 import java.io.IOException;
 
 //challenge 2 word pic facile  elephant
-public class picword2 extends JFrame implements ActionListener{
+public class picword2 extends JFrame implements ActionListener {
         Font ghostKidAOEPro;
 
-        JButton choix1 ,choix2 ,choix3 ,choix4 ,menu ;
+        JButton choix1, choix2, choix3, choix4, menu;
 
         picword2() throws FontFormatException, IOException {
 
@@ -25,16 +26,16 @@ public class picword2 extends JFrame implements ActionListener{
                 JLabel background = new JLabel(new ImageIcon("qst bg.png"));
                 ImageIcon imageMATHQSTF = new ImageIcon("elephant.png"); // la question
                 // --------------------les cohoix-----------------
-                 choix1 = Create.createTransparentButton("bear", "labelchoix.png", 50);
-                 choix1.addActionListener(this);
-                 choix2 = Create.createTransparentButton("Elephant", "labelchoix.png", 50);
-                 choix2.addActionListener(this);
-                 choix3 = Create.createTransparentButton("tiger", "labelchoix.png", 50);
-                 choix3.addActionListener(this);
-                 choix4 = Create.createTransparentButton("cat", "labelchoix.png", 50);
-                 choix4.addActionListener(this);
-                 menu = Create.ButtonIcons("menue.png"); // menu button
-                 menu.addActionListener(this);
+                choix1 = Create.createTransparentButton("bear", "labelchoix.png", 50);
+                choix1.addActionListener(this);
+                choix2 = Create.createTransparentButton("Elephant", "labelchoix.png", 50);
+                choix2.addActionListener(this);
+                choix3 = Create.createTransparentButton("tiger", "labelchoix.png", 50);
+                choix3.addActionListener(this);
+                choix4 = Create.createTransparentButton("cat", "labelchoix.png", 50);
+                choix4.addActionListener(this);
+                menu = Create.ButtonIcons("menue.png"); // menu button
+                menu.addActionListener(this);
                 // ----------------lktiba li mtht
                 JPanel panel2 = new JPanel();
                 JLabel qst = new JLabel();
@@ -42,7 +43,8 @@ public class picword2 extends JFrame implements ActionListener{
 
                 /*------------------   add frame  -----------------*/
 
-                setSize(1000, 1000);
+                this.setSize(Toolkit.getDefaultToolkit().getScreenSize());
+
                 setTitle("Baby Bear");
 
                 ImageIcon icon = new ImageIcon("BabyBearIcon.png");
@@ -135,35 +137,37 @@ public class picword2 extends JFrame implements ActionListener{
 
         }
 
-
-
-
-
         public void actionPerformed(ActionEvent e) {
-     
-                if (e.getSource () == choix2) {
-                       setVisible(false);
-                   try {
-                  new Congrats();  }
-                    catch (FontFormatException | IOException e1) {
-                   // TODO Auto-generated catch block
-                   e1.printStackTrace();
-               }
-                   }
-                
-                 else{  
-                        if (e.getSource () == menu) {
-                       setVisible(false);
-                  try {
-                      new sections();}
-                       catch (FontFormatException | IOException e5) {
-                     // TODO Auto-generated catch block
-                      e5.printStackTrace();
-                 }
-                 }}
 
-               }
-        public static void main(String[] args) throws Exception {
-                new picword2();
+                if (e.getSource() == choix2) {
+                        setVisible(false);
+                        try {
+                                new Congrats(new sections());
+                        } catch (FontFormatException | IOException e1) {
+                                // TODO Auto-generated catch block
+                                e1.printStackTrace();
+                        }
+                }
+
+                else {
+                        setVisible(false);
+                        try {
+                                new Wrong(new picword2());
+                        } catch (FontFormatException | IOException e1) {
+                                // TODO Auto-generated catch block
+                                e1.printStackTrace();
+                        }
+                        
+                }
+                if (e.getSource() == menu) {
+                                setVisible(false);
+                                try {
+                                        new sections();
+                                } catch (FontFormatException | IOException e5) {
+                                        // TODO Auto-generated catch block
+                                        e5.printStackTrace();
+                                }
+                        }
+
         }
 }

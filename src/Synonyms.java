@@ -1,3 +1,4 @@
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,7 +10,7 @@ import java.io.IOException;
 //palestine facile 
 public class Synonyms extends JFrame implements ActionListener {
         Font ghostKidAOEPro;
-       JButton choix1 ,choix2 ,choix3 ,choix4 ,menu ;
+        JButton choix1, choix2, choix3, choix4, menu;
 
         Synonyms() throws FontFormatException, IOException {
 
@@ -33,7 +34,7 @@ public class Synonyms extends JFrame implements ActionListener {
                 choix3.addActionListener(this);
                 choix4 = Create.createTransparentButton("false", "labelchoix.png", 50);
                 choix4.addActionListener(this);
-                menu = Create.ButtonIcons("Group-15302.png"); 
+                menu = Create.ButtonIcons("menue.png");
                 menu.addActionListener(this);
                 // menu button
                 // ----------------lktiba li mtht
@@ -43,7 +44,8 @@ public class Synonyms extends JFrame implements ActionListener {
 
                 /*------------------   add frame  -----------------*/
 
-                setSize(1000, 1000);
+                this.setSize(Toolkit.getDefaultToolkit().getScreenSize());
+
                 setTitle("Baby Bear");
 
                 ImageIcon icon = new ImageIcon("BabyBearIcon.png");
@@ -132,37 +134,37 @@ public class Synonyms extends JFrame implements ActionListener {
 
         }
 
-
-
-
         public void actionPerformed(ActionEvent e) {
-     
-                if (e.getSource () == choix3) {
-                       setVisible(false);
-                   try {
-                   new Synonyms2 ();  }
-                    catch (FontFormatException | IOException e1) {
-                   // TODO Auto-generated catch block
-                   e1.printStackTrace();
-               }
-                   }
-                
-                 else{  
-                        if (e.getSource () == menu) {
-                       setVisible(false);
-                  try {
-                      new sections();}
-                       catch (FontFormatException | IOException e5) {
-                     // TODO Auto-generated catch block
-                      e5.printStackTrace();
-                 }
-                 }}
 
-               }
+                if (e.getSource() == choix3) {
+                        setVisible(false);
+                        try {
+                                new Correct(new Synonyms2());
+                        } catch (FontFormatException | IOException e1) {
 
+                                e1.printStackTrace();
+                        }
+                }
 
-        public static void main(String[] args) throws Exception {
-                new Synonyms();
+                else {
+                        try {
+                                new Wrong(new Synonyms());
+                        } catch (FontFormatException | IOException e1) {
+
+                                e1.printStackTrace();
+                        }
+                }
+
+                if (e.getSource() == menu) {
+                        setVisible(false);
+                        try {
+                                new sections();
+                        } catch (FontFormatException | IOException e5) {
+                                // TODO Auto-generated catch block
+                                e5.printStackTrace();
+                        }
+                }
+
         }
-}
 
+}
