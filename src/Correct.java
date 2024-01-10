@@ -53,15 +53,16 @@ public class Correct extends JFrame implements ActionListener {
         setVisible(false);
         if (e.getSource() == out) {
             try {
+                setVisible(false);
                 new sections();
             } catch (FontFormatException | IOException e1) {
                 e1.printStackTrace();
             }
         } else {
             // next
-            if (e.getSource() == back) {
+          //  if (e.getSource() == back) {
                 Object obj = replayobj(e);
-            }
+           // }
         }
     }
 

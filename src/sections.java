@@ -1,5 +1,4 @@
 
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -46,7 +45,7 @@ public class sections extends JFrame implements ActionListener {
         /*------------------   add frame  -----------------*/
 
         this.setSize(Toolkit.getDefaultToolkit().getScreenSize());
-      
+
         setTitle("Baby Bear");
 
         ImageIcon icon = new ImageIcon("BabyBearIcon.png");
@@ -96,7 +95,7 @@ public class sections extends JFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-
+        setVisible(false);
         if (e.getSource() == choix1) {
             setVisible(false);
             try {
@@ -106,31 +105,34 @@ public class sections extends JFrame implements ActionListener {
             }
         } else {
             if (e.getSource() == choix2) {
-                setVisible(false);
+
                 try {
+                    setVisible(false);
                     new Synonyms();
-                } catch (FontFormatException | IOException e2) {
+                } catch (FontFormatException | IOException e1) {
                     // TODO Auto-generated catch block
-                    e2.printStackTrace();
+                    e1.printStackTrace();
                 }
             } else {
                 if (e.getSource() == choix3) {
-                    setVisible(false);
+
                     try {
+                        setVisible(false);
+
                         new picword();
-                    } catch (FontFormatException | IOException e3) {
+                    } catch (FontFormatException | IOException e1) {
                         // TODO Auto-generated catch block
-                        e3.printStackTrace();
+                        e1.printStackTrace();
                     }
                 } else {
                     if (e.getSource() == choix4) {
-                        setVisible(false);
+                        
                         try {
-
+setVisible(false);
                             new flagsfacile1();
-                        } catch (FontFormatException | IOException e4) {
+                        } catch (FontFormatException | IOException e1) {
                             // TODO Auto-generated catch block
-                            e4.printStackTrace();
+                            e1.printStackTrace();
                         }
 
                     }

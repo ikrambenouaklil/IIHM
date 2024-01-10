@@ -142,13 +142,24 @@ public class flagsfacile1 extends JFrame implements ActionListener {
                 if (e.getSource() == choix2) {
 
                         try {
+                                setVisible(false);
                                 new Correct(new flagsfacile2());
                         } catch (FontFormatException | IOException e1) {
                                 // TODO Auto-generated catch block
                                 e1.printStackTrace();
                         }
-                } else {
+                } else if (e.getSource() == menu) {
+                      
+                        try { 
+                                 setVisible(false);
+                                new sections();
+                        } catch (FontFormatException | IOException e5) {
+                                // TODO Auto-generated catch block
+                                e5.printStackTrace();
+                        }
+                }else{
                         try {
+                                setVisible(false);
                                 new Wrong(new flagsfacile1());
                         } catch (FontFormatException | IOException e1) {
                                 // TODO Auto-generated catch block
@@ -156,15 +167,7 @@ public class flagsfacile1 extends JFrame implements ActionListener {
                         }
                 }
 
-                if (e.getSource() == menu) {
-                        setVisible(false);
-                        try {
-                                new sections();
-                        } catch (FontFormatException | IOException e5) {
-                                // TODO Auto-generated catch block
-                                e5.printStackTrace();
-                        }
-                }
+                
 
         }
 

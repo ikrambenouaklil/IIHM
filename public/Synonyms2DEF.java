@@ -38,7 +38,7 @@ public class Synonyms2DEF extends JFrame implements ActionListener {
                 choix4 = Create.createTransparentButton("Happy", "labelchoix.png", 50);
                 choix4.addActionListener(this);
                 // ---------------menu button ----------
-                 menu = Create.ButtonIcons("menue.png");
+                menu = Create.ButtonIcons("menue.png");
                 menu.addActionListener(this);
                 // menu button
                 // ----------------lktiba li mtht
@@ -49,7 +49,7 @@ public class Synonyms2DEF extends JFrame implements ActionListener {
                 /*------------------   add frame  -----------------*/
 
                 this.setSize(Toolkit.getDefaultToolkit().getScreenSize());
-               
+
                 setTitle("Baby Bear");
 
                 ImageIcon icon = new ImageIcon("BabyBearIcon.png");
@@ -139,9 +139,9 @@ public class Synonyms2DEF extends JFrame implements ActionListener {
 
         }
 
-        public void actionPerformed(ActionEvent e3) {
+        public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                if (e3.getSource() == choix1) {
+                if (e.getSource() == choix1) {
                         setVisible(false);
                         try {
                                 new Congrats(new sectionsDEF());
@@ -149,7 +149,7 @@ public class Synonyms2DEF extends JFrame implements ActionListener {
 
                                 e1.printStackTrace();
                         }
-                }  else   if (e3.getSource() == menu) {
+                } else if (e.getSource() == menu) {
                         setVisible(false);
                         try {
                                 new sectionsDEF();
@@ -157,7 +157,7 @@ public class Synonyms2DEF extends JFrame implements ActionListener {
                                 // TODO Auto-generated catch block
                                 e1.printStackTrace();
                         }
-                }else {
+                } else {
                         setVisible(false);
                         try {
                                 new Wrong(new Synonyms2DEF());
@@ -167,7 +167,6 @@ public class Synonyms2DEF extends JFrame implements ActionListener {
                         }
                 }
 
-              
         }
 
 }

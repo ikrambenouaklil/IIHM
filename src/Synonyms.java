@@ -146,23 +146,27 @@ public class Synonyms extends JFrame implements ActionListener {
                         }
                 }
 
-                else {
+               
+
+                else if (e.getSource() == menu) {
+                        
                         try {
+                                setVisible(false);
+                                new sections();
+                        } catch (FontFormatException | IOException e1) {
+                                // TODO Auto-generated catch block
+                                e1.printStackTrace();
+                        }
+                }else {
+                         
+                        try {
+                                setVisible(false);
                                 new Wrong(new Synonyms());
                         } catch (FontFormatException | IOException e1) {
 
                                 e1.printStackTrace();
                         }
-                }
-
-                if (e.getSource() == menu) {
-                        setVisible(false);
-                        try {
-                                new sections();
-                        } catch (FontFormatException | IOException e5) {
-                                // TODO Auto-generated catch block
-                                e5.printStackTrace();
-                        }
+                
                 }
 
         }

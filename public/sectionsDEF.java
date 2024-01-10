@@ -11,6 +11,7 @@ import java.io.IOException;
 public class sectionsDEF extends JFrame implements ActionListener {
     Font ghostKidAOEPro;
     JButton choix1, choix2, choix3, choix4, icomenu;
+
     public sectionsDEF() throws FontFormatException, IOException {
         try {
             ghostKidAOEPro = Font.createFont(Font.TRUETYPE_FONT, new File("GhostKidAOE_Pro.ttf"));
@@ -40,7 +41,7 @@ public class sectionsDEF extends JFrame implements ActionListener {
         /*------------------   add frame  -----------------*/
 
         this.setSize(Toolkit.getDefaultToolkit().getScreenSize());
-      
+
         setTitle("Baby Bear");
 
         ImageIcon icon = new ImageIcon("BabyBearIcon.png");
@@ -88,7 +89,7 @@ public class sectionsDEF extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         setVisible(false);
         if (e.getSource() == choix1) {
-         
+
             try {
                 new MathDef();
             } catch (FontFormatException | IOException e1) {
@@ -96,47 +97,47 @@ public class sectionsDEF extends JFrame implements ActionListener {
             }
         } else {
             if (e.getSource() == choix2) {
-                
+
                 try {
                     new SynonymsDEF();
-                } catch (FontFormatException | IOException e2) {
+                } catch (FontFormatException | IOException e1) {
                     // TODO Auto-generated catch block
-                    e2.printStackTrace();
+                    e1.printStackTrace();
                 }
             } else {
                 if (e.getSource() == choix3) {
-                   
+
                     try {
                         new picwordDEF();
-                    } catch (FontFormatException | IOException e3) {
+                    } catch (FontFormatException | IOException e1) {
                         // TODO Auto-generated catch block
-                        e3.printStackTrace();
+                        e1.printStackTrace();
                     }
-                } else { if (e.getSource() == choix4) {
-                       
+                } else {
+                    if (e.getSource() == choix4) {
+
                         try {
                             new flagsdefficile();
-                        } catch (FontFormatException | IOException e4) {
-                            e4.printStackTrace();
+                        } catch (FontFormatException | IOException e1) {
+                            e1.printStackTrace();
                         }
 
                     } else {
-                      try {
+                        try {
                             new Sld1();
                         } catch (FontFormatException | IOException e5) {
                             // TO DO Auto-generated catch block
                             e5.printStackTrace();
                         }
                     }
-                   
-                    }
+
                 }
             }
+        }
 
-
-           
     }
-public static void main(String[] args) throws FontFormatException, IOException {
-    new sectionsDEF(); 
-}
+
+    public static void main(String[] args) throws FontFormatException, IOException {
+        new sectionsDEF();
+    }
 }

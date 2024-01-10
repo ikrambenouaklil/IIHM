@@ -138,20 +138,30 @@ public class picword2 extends JFrame implements ActionListener {
         }
 
         public void actionPerformed(ActionEvent e) {
-
+setVisible(false);
                 if (e.getSource() == choix2) {
-                        setVisible(false);
+                        
                         try {
+                                
                                 new Congrats(new sections());
+                                setVisible(false);
                         } catch (FontFormatException | IOException e1) {
                                 // TODO Auto-generated catch block
                                 e1.printStackTrace();
                         }
-                }
-
-                else {
-                        setVisible(false);
-                        try {
+                }  else  if (e.getSource() == menu) {
+                              
+                                try { 
+                                         setVisible(false);
+                                        new sections();
+                                } catch (FontFormatException | IOException e5) {
+                                        // TODO Auto-generated catch block
+                                        e5.printStackTrace();
+                                }
+                 }else{
+                       
+                        try { 
+                                setVisible(false);
                                 new Wrong(new picword2());
                         } catch (FontFormatException | IOException e1) {
                                 // TODO Auto-generated catch block
@@ -159,15 +169,7 @@ public class picword2 extends JFrame implements ActionListener {
                         }
                         
                 }
-                if (e.getSource() == menu) {
-                                setVisible(false);
-                                try {
-                                        new sections();
-                                } catch (FontFormatException | IOException e5) {
-                                        // TODO Auto-generated catch block
-                                        e5.printStackTrace();
-                                }
-                        }
+               
 
         }
 }

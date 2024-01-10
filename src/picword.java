@@ -141,25 +141,26 @@ public class picword extends JFrame implements ActionListener {
 
                 if (e.getSource() == choix3) {
                         try {
+                                setVisible(false);
                                 new Correct(new picword2());
                         } catch (FontFormatException | IOException e1) {
                                 e1.printStackTrace();
                         }
-                } else {
+                } else  if (e.getSource() == menu) {
+                        
                         try {
-                                new Wrong(new picword());
-                        } catch (FontFormatException | IOException e1) {
-                                e1.printStackTrace();
-                        }
-                }
-
-                if (e.getSource() == menu) {
-                        setVisible(false);
-                        try {
+                                setVisible(false);
                                 new sections();
                         } catch (FontFormatException | IOException e5) {
                                 // TODO Auto-generated catch block
                                 e5.printStackTrace();
+                        }
+                }else{
+                        try {
+                                setVisible(false); 
+                                new Wrong(new  picword());
+                        } catch (FontFormatException | IOException e1) {
+                                e1.printStackTrace();
                         }
                 }
         }

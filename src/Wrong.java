@@ -32,6 +32,7 @@ public class Wrong extends JFrame implements ActionListener {
         background.add(panel, BorderLayout.CENTER);
         setLocationRelativeTo(null); // Centrer le frame
         setVisible(true);
+       
     }
 
     private JButton addButton(JPanel panel, String iconpath, int gridx, int gridy) {
@@ -50,20 +51,21 @@ public class Wrong extends JFrame implements ActionListener {
         return obj;
     }
 
-    public void actionPerformed(ActionEvent e5) {
+    public void actionPerformed(ActionEvent e) {
         setVisible(false);
-       
-        if (e5.getSource() == out) {
+    
+        if (e.getSource() == out) {
             try {
                 new sections();
             } catch (FontFormatException | IOException e1) {
                 e1.printStackTrace();
             }
         } else {
-            if (e5.getSource() == replay) {
-                Object obj = replayobj(e5);
+            if (e.getSource() == replay) {
+                Object obj = replayobj(e);
             }
         }
+       
     }
 
 }

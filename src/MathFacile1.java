@@ -134,10 +134,11 @@ public class MathFacile1 extends JFrame implements ActionListener {
         }
 
         public void actionPerformed(ActionEvent e) {
-
+setVisible(false);
                 if (e.getSource() == choix1) {
-                        setVisible(false);
+                        
                         try {
+                                setVisible(false);
                                 new Congrats(new sections());
 
                         } catch (FontFormatException | IOException e1) {
@@ -145,23 +146,25 @@ public class MathFacile1 extends JFrame implements ActionListener {
                         }
                 }
 
-                else {
-                        setVisible(false);
+                else   if (e.getSource() == menu) {
+                       
+                        try { 
+                                setVisible(false);
+                                new sections();
+                        } catch (FontFormatException | IOException e5) {
+                                e5.printStackTrace();
+                        }
+                }else{
+                        
                         try {
+                                setVisible(false);
                                 new Wrong(new MathFacile1());
                         } catch (FontFormatException | IOException e1) {
                                 e1.printStackTrace();
                         }
                 }
 
-                if (e.getSource() == menu) {
-                        setVisible(false);
-                        try {
-                                new sections();
-                        } catch (FontFormatException | IOException e5) {
-                                e5.printStackTrace();
-                        }
-                }
+              
 
         }
 
