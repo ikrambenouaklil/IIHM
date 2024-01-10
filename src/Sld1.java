@@ -20,6 +20,7 @@ public class Sld1 extends JFrame implements ActionListener {
 
         /* -----frame --------------- */
         this.setTitle("Baby Bear");
+<<<<<<< Updated upstream
         this.setSize(Toolkit.getDefaultToolkit().getScreenSize());
 
         ImageIcon icon = new ImageIcon("BabyBearIcon.png");
@@ -68,6 +69,55 @@ public class Sld1 extends JFrame implements ActionListener {
             } catch (FontFormatException | IOException e1) {
                 e1.printStackTrace();
 
+=======
+        this.setSize(1000, 1000);
+        ImageIcon icon = new ImageIcon("BabyBearIcon.png");
+        this.setIconImage(icon.getImage());
+
+        /* -------background --------------- */
+        bg = new JLabel(new ImageIcon("main page.png"));
+        setContentPane(bg);
+        bg.setLayout(new BorderLayout());
+
+        /*-------panel ------- */
+
+        JPanel pan = new JPanel();
+
+        /* play button */
+        Play = Create.createTransparentButton("Play", "labelchoix.png", 50);
+        Play.addActionListener(this);
+
+        Play.setFocusable(false);
+        GridBagConstraints gbc = new GridBagConstraints();
+        GridBagLayout layout = new GridBagLayout();
+
+        gbc.gridx = 2;
+        gbc.gridy = 3;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.insets.set(200, 0, 0, 0);
+        pan.setLayout(layout);
+        pan.setOpaque(false);
+        pan.add(Play, gbc);
+
+        bg.add(pan, BorderLayout.CENTER);
+
+        /* we must do it */
+        setLocationRelativeTo(null); // Centrer le frame
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setVisible(true);
+
+    }
+
+    public void actionPerformed(ActionEvent e) {
+
+        if (e.getSource() == Play) {
+            setVisible(false);
+            try {
+                new sections();
+            } catch (FontFormatException | IOException e1) {
+                e1.printStackTrace();
+
+>>>>>>> Stashed changes
             }
         }
 

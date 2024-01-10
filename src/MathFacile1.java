@@ -134,6 +134,30 @@ public class MathFacile1 extends JFrame implements ActionListener {
         }
 
         public void actionPerformed(ActionEvent e) {
+<<<<<<< Updated upstream
+=======
+     
+                if (e.getSource () == choix1) {
+                       setVisible(false);
+                   try {
+                           Correct choix1Correct = new Correct(); 
+                           choix1Correct.actionPerformed(e); 
+                  }
+                    catch (FontFormatException | IOException e1) {
+                   e1.printStackTrace();
+               }
+                   }
+                
+                 else{  
+                        if (e.getSource () == menu) {
+                       setVisible(false);
+                  try {
+                      new sections();}
+                       catch (FontFormatException | IOException e5) {
+                      e5.printStackTrace();
+                 }
+                 }}
+>>>>>>> Stashed changes
 
                 if (e.getSource() == choix1) {
                         setVisible(false);

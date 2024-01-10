@@ -138,8 +138,42 @@ public class flagsfacile1 extends JFrame implements ActionListener {
         }
 
         public void actionPerformed(ActionEvent e) {
+<<<<<<< Updated upstream
                 setVisible(false);
                 if (e.getSource() == choix2) {
+=======
+      setVisible(false);
+                if (e.getSource () == choix2) {
+                      
+                   try {
+                   new Correct();
+                   
+                  }
+                    catch (FontFormatException | IOException e1) {
+                   // TODO Auto-generated catch block
+                   e1.printStackTrace();
+               }
+                   }
+                
+                 else{  
+                   try {
+                   new Wrong();  }
+                    catch (FontFormatException | IOException e1) {
+                   // TODO Auto-generated catch block
+                   e1.printStackTrace();
+               }
+                 }
+
+
+                 if (e.getSource () == menu) {
+                       setVisible(false);
+                  try {
+                      new sections();}
+                       catch (FontFormatException | IOException e5) {
+                     // TODO Auto-generated catch block
+                      e5.printStackTrace();
+                 }}
+>>>>>>> Stashed changes
 
                         try {
                                 new Correct(new flagsfacile2());

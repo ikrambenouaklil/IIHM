@@ -6,6 +6,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Correct extends JFrame implements ActionListener {
+<<<<<<< Updated upstream
+=======
+
+    JButton out;
+    JButton back;
+>>>>>>> Stashed changes
 
     JButton out;
     JButton back;
@@ -13,8 +19,12 @@ public class Correct extends JFrame implements ActionListener {
     Correct(Object obj) throws FontFormatException, IOException {
         setTitle("Baby Bear");
         ImageIcon icon = new ImageIcon("BabyBearIcon.png");
+<<<<<<< Updated upstream
         this.setSize(Toolkit.getDefaultToolkit().getScreenSize());
 
+=======
+        setSize(1000, 1000);
+>>>>>>> Stashed changes
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // Ajout d'un fond d'écran
         JLabel background = new JLabel(new ImageIcon("correct -1.png"));
@@ -45,6 +55,7 @@ public class Correct extends JFrame implements ActionListener {
         return button;
     }
 
+<<<<<<< Updated upstream
     public Object replayobj(Object obj) {
         return obj;
     }
@@ -65,4 +76,20 @@ public class Correct extends JFrame implements ActionListener {
         }
     }
 
+=======
+    public void actionPerformed(ActionEvent e) {
+     }
+   public static void main(String[] args) throws FontFormatException, IOException {
+    new Correct(); 
+   }
+
+
+
+     
+>>>>>>> Stashed changes
 }
+
+
+
+
+

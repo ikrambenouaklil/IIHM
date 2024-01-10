@@ -9,25 +9,39 @@ public class Wrong extends JFrame implements ActionListener {
     JButton replay;
     JButton out;
 
+<<<<<<< Updated upstream
     Wrong(Object obj) throws FontFormatException, IOException {
         ImageIcon icon = new ImageIcon("BabyBearIcon.png");
+=======
+    Wrong() throws FontFormatException, IOException {
+       ImageIcon icon = new ImageIcon("BabyBearIcon.png");
+>>>>>>> Stashed changes
         setTitle("Baby Bear");
         this.setSize(Toolkit.getDefaultToolkit().getScreenSize());
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // Ajout d'un fond d'écran
         JLabel background = new JLabel(new ImageIcon("wrong-1.png"));
+<<<<<<< Updated upstream
 
+=======
+        
+>>>>>>> Stashed changes
         setContentPane(background);
         background.setLayout(new BorderLayout());
         JPanel panel = new JPanel();
         panel.setLayout(new GridBagLayout());
         panel.setOpaque(false); // Rend le panneau transparent
         // Ajout de vos boutons avec les contraintes GridBag
+<<<<<<< Updated upstream
         out = addButton(panel, "Menu.png", 0, 1);
         out.addActionListener(this);
         replay = addButton(panel, "REPLAY.png", 3, 1);
         replay.addActionListener(this);
+=======
+        addButton(panel, "Menu.png", 0, 1);
+        addButton(panel, "REPLAY.png", 2, 1);
+>>>>>>> Stashed changes
         // Ajout du panneau au bas du frame
         background.add(panel, BorderLayout.CENTER);
         setLocationRelativeTo(null); // Centrer le frame

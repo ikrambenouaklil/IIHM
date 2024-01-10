@@ -137,6 +137,7 @@ public class picword extends JFrame implements ActionListener {
         }
 
         public void actionPerformed(ActionEvent e) {
+<<<<<<< Updated upstream
          
 
                 if (e.getSource() == choix3) {
@@ -154,6 +155,30 @@ public class picword extends JFrame implements ActionListener {
                                 e1.printStackTrace();
                         }
                 }
+=======
+              setVisible(false);
+
+                if (e.getSource () == choix3) {
+                   try {
+                   new CorrectPic();  }
+                    catch (FontFormatException | IOException e1) {
+                   // TODO Auto-generated catch block
+                   e1.printStackTrace();
+               }
+                   }
+
+
+                   if (e.getSource () == menu) {
+                   setVisible(false);
+                   try {
+                   new sections();}
+                   catch (FontFormatException | IOException e5) {
+                  // TODO Auto-generated catch block
+                      e5.printStackTrace();
+                 }
+                 }
+        }
+>>>>>>> Stashed changes
 
                 if (e.getSource() == menu) {
                         setVisible(false);
