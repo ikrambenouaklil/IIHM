@@ -60,7 +60,7 @@ public class Sld1 extends JFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-
+        setVisible(false);
         if (e.getSource() == Play) {
             setVisible(false);
             try {

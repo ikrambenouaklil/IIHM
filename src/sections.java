@@ -104,9 +104,10 @@ public class sections extends JFrame implements ActionListener {
             } catch (FontFormatException | IOException e1) {
                 e1.printStackTrace();
             }
-        } else {
+        } else { 
+            setVisible(false);
             if (e.getSource() == choix2) {
-                setVisible(false);
+               
                 try {
                     new Synonyms();
                 } catch (FontFormatException | IOException e2) {

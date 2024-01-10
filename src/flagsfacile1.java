@@ -148,6 +148,7 @@ public class flagsfacile1 extends JFrame implements ActionListener {
                                 e1.printStackTrace();
                         }
                 } else {
+                        setVisible(false);
                         try {
                                 new Wrong(new flagsfacile1());
                         } catch (FontFormatException | IOException e1) {

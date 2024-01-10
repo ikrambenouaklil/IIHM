@@ -54,12 +54,14 @@ public class Wrong extends JFrame implements ActionListener {
         setVisible(false);
        
         if (e5.getSource() == out) {
+            setVisible(false);
             try {
                 new sections();
             } catch (FontFormatException | IOException e1) {
                 e1.printStackTrace();
             }
         } else {
+            setVisible(false);
             if (e5.getSource() == replay) {
                 Object obj = replayobj(e5);
             }

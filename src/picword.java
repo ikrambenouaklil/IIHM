@@ -137,15 +137,17 @@ public class picword extends JFrame implements ActionListener {
         }
 
         public void actionPerformed(ActionEvent e) {
-                setVisible(false);
+         
 
                 if (e.getSource() == choix3) {
+                               setVisible(false);
                         try {
                                 new Correct(new picword2());
                         } catch (FontFormatException | IOException e1) {
                                 e1.printStackTrace();
                         }
                 } else {
+                         setVisible(false);
                         try {
                                 new Wrong(new picword());
                         } catch (FontFormatException | IOException e1) {
