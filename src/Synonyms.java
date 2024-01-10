@@ -135,7 +135,7 @@ public class Synonyms extends JFrame implements ActionListener {
         }
 
         public void actionPerformed(ActionEvent e) {
-                setVisible(false);
+
                 if (e.getSource() == choix3) {
                         setVisible(false);
                         try {
@@ -147,7 +147,6 @@ public class Synonyms extends JFrame implements ActionListener {
                 }
 
                 else {
-                        setVisible(false);
                         try {
                                 new Wrong(new Synonyms());
                         } catch (FontFormatException | IOException e1) {

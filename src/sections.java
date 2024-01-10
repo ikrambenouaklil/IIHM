@@ -99,16 +99,14 @@ public class sections extends JFrame implements ActionListener {
 
         if (e.getSource() == choix1) {
             setVisible(false);
-<<<<<<< Updated upstream
             try {
                 new MathFacile1();
             } catch (FontFormatException | IOException e1) {
                 e1.printStackTrace();
             }
-        } else { 
-            setVisible(false);
+        } else {
             if (e.getSource() == choix2) {
-               
+                setVisible(false);
                 try {
                     new Synonyms();
                 } catch (FontFormatException | IOException e2) {
@@ -147,16 +145,6 @@ public class sections extends JFrame implements ActionListener {
                     }
                 }
             }
-=======
-        try {
-        new MathFacile1();  
-    
-    
-    }
-         catch (FontFormatException | IOException e1) {
-        e1.printStackTrace();
-    }
->>>>>>> Stashed changes
         }
     }
 
