@@ -2,6 +2,8 @@
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowListener;
+
 import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
@@ -12,7 +14,7 @@ public class flagsfacile1 extends JFrame implements ActionListener {
 
         JButton choix1, choix2, choix3, choix4, menu;
 
-        flagsfacile1() throws FontFormatException, IOException {
+   public   flagsfacile1() throws FontFormatException, IOException {
 
                 try {
                         ghostKidAOEPro = Font.createFont(Font.TRUETYPE_FONT, new File("GhostKidAOE_Pro.ttf"));
@@ -137,6 +139,8 @@ public class flagsfacile1 extends JFrame implements ActionListener {
 
         }
 
+       
+    
         public void actionPerformed(ActionEvent e) {
                 setVisible(false);
                 if (e.getSource() == choix2) {
@@ -162,7 +166,7 @@ public class flagsfacile1 extends JFrame implements ActionListener {
                                 setVisible(false);
                                 new Wrong(new flagsfacile1());
                         } catch (FontFormatException | IOException e1) {
-                                // TODO Auto-generated catch block
+                                
                                 e1.printStackTrace();
                         }
                 }

@@ -143,6 +143,7 @@ public class picword extends JFrame implements ActionListener {
                         try {
                                 setVisible(false);
                                 new Correct(new picword2());
+                                
                         } catch (FontFormatException | IOException e1) {
                                 e1.printStackTrace();
                         }

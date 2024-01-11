@@ -56,15 +56,18 @@ public class Wrong extends JFrame implements ActionListener {
     
         if (e.getSource() == out) {
             try {
+                
                 new sections();
             } catch (FontFormatException | IOException e1) {
                 e1.printStackTrace();
             }
-        } else {
-            if (e.getSource() == replay) {
-                Object obj = replayobj(e);
+        } else  if (e.getSource() == replay) {
+                
+                Object obj = replayobj(e); 
+              
+                
             }
-        }
+    
        
     }
 

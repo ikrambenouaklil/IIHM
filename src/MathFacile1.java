@@ -12,7 +12,7 @@ public class MathFacile1 extends JFrame implements ActionListener {
 
         JButton choix1, choix2, choix3, choix4, menu;
 
-        MathFacile1() throws FontFormatException, IOException {
+        MathFacile1( ) throws FontFormatException, IOException {
 
                 try {
                         ghostKidAOEPro = Font.createFont(Font.TRUETYPE_FONT, new File("GhostKidAOE_Pro.ttf"));
@@ -128,7 +128,7 @@ public class MathFacile1 extends JFrame implements ActionListener {
 
                 /*----------------------must do it-----------------  */
 
-                setVisible(true);
+        setVisible(true);
                 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         }

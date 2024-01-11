@@ -152,7 +152,15 @@ public class Synonyms2 extends JFrame implements ActionListener {
                         }
                 }
 
-                else {
+                else if (e.getSource() == menu) {
+                        setVisible(false);
+                        try {
+                                new sections();
+                        } catch (FontFormatException | IOException e1) {
+                                // TODO Auto-generated catch block
+                                e1.printStackTrace();
+                        }
+                }else{
                         setVisible(false);
                         try {
                                 new Wrong(new Synonyms2());
@@ -161,16 +169,7 @@ public class Synonyms2 extends JFrame implements ActionListener {
                                 e1.printStackTrace();
                         }
                 }
-
-                if (e.getSource() == menu) {
-                        setVisible(false);
-                        try {
-                                new sections();
-                        } catch (FontFormatException | IOException e1) {
-                                // TODO Auto-generated catch block
-                                e1.printStackTrace();
-                        }
-                }
+  
         }
 
 }

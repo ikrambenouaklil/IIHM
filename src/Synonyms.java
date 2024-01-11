@@ -137,18 +137,15 @@ public class Synonyms extends JFrame implements ActionListener {
         public void actionPerformed(ActionEvent e) {
 
                 if (e.getSource() == choix3) {
-                        setVisible(false);
+                       
                         try {
+                                setVisible(false);
                                 new Correct(new Synonyms2());
                         } catch (FontFormatException | IOException e1) {
 
                                 e1.printStackTrace();
                         }
-                }
-
-               
-
-                else if (e.getSource() == menu) {
+                }   else if (e.getSource() == menu) {
                         
                         try {
                                 setVisible(false);

@@ -2,6 +2,7 @@
 import java.awt.*;
 import javax.swing.*;
 import java.io.IOException;
+import java.sql.Array;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -45,24 +46,26 @@ public class Correct extends JFrame implements ActionListener {
         return button;
     }
 
-    public Object replayobj(Object obj) {
-        return obj;
+    public Object replayobj(Object obj ) {
+       return obj ; 
     }
 
     public void actionPerformed(ActionEvent e) {
         setVisible(false);
         if (e.getSource() == out) {
             try {
-                setVisible(false);
+                
                 new sections();
+                setVisible(false);
             } catch (FontFormatException | IOException e1) {
                 e1.printStackTrace();
             }
         } else {
-            // next
-          //  if (e.getSource() == back) {
-                Object obj = replayobj(e);
-           // }
+            setVisible(false);
+            Class cls = e.getClass();  
+            Object obj = replayobj(e);
+          
+            
         }
     }
 

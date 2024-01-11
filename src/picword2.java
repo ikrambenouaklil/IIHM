@@ -142,7 +142,7 @@ setVisible(false);
                 if (e.getSource() == choix2) {
                         
                         try {
-                                
+                                setVisible(false);
                                 new Congrats(new sections());
                                 setVisible(false);
                         } catch (FontFormatException | IOException e1) {

@@ -32,18 +32,20 @@ public class Congrats extends JFrame implements ActionListener {
         background.add(panel, BorderLayout.SOUTH);
 
         setLocationRelativeTo(null); // Centrer le frame
-        setVisible(true);
-
+       setVisible(true);
         panel.add(menu);
 
     }
 
     public Object replayobj(Object obj) {
+      
         return obj;
+        
     }
     public void actionPerformed(ActionEvent e) {
-        setVisible(false);
+       
         if (e.getSource() == menu) {
+                setVisible(false);
                 Object obj = replayobj(e); 
         }
 
